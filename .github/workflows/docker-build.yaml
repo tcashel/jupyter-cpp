@@ -19,9 +19,11 @@ jobs:
       uses: docker/setup-buildx-action@v1
 
     - name: Build Docker Image
-      run: docker build -t cpp_jupyterlab .
+      run: docker build -t jupyterlab_cpp .
 
-    - name: Run Container
+    - name: Run C++ Notebook Test
       run: |
-        docker run -d --name cpp_test cpp_jupyterlab
-        docker exec cpp_test sh -c "jupyter kernelspec list | grep xeus-cling-cpp17"
+    docker run -d --name cpp_test -v ${{ github.workspace }}/notebooks/:/workspace/notebooks/ jupyterlab_cpp jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --no-browser
+    sleep 10
+    docker exec cpp_test jupyter nbconvert --to notebook --execute /workspace/notebooks/cpp_kernel_test.ipynb
+
