@@ -23,7 +23,6 @@ jobs:
 
     - name: Run C++ Notebook Test
       run: |
-    docker run -d --name cpp_test -v ${{ github.workspace }}/notebooks/:/workspace/notebooks/ jupyterlab_cpp jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --no-browser
-    sleep 10
-    docker exec cpp_test jupyter nbconvert --to notebook --execute /workspace/notebooks/cpp_kernel_test.ipynb
-
+        docker run -d --name cpp_test -v ${{ github.workspace }}/notebooks/:/workspace/notebooks/ jupyterlab_cpp jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --no-browser
+        sleep 10
+        docker exec cpp_test jupyter nbconvert --to notebook --execute /workspace/notebooks/cpp_kernel_test.ipynb
