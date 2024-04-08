@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  jupyterlab_cpp:
+    image: jupyterlab_cpp:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/workspace/notebooks
+    command: jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --no-browser
