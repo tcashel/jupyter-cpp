@@ -38,10 +38,10 @@ jobs:
       # Push Docker Image with the tag version
       - name: Push Docker Image with the tag version
         run: |
-          docker tag jupyterlab_cpp ${{ secrets.DOCKER_HUB_USERNAME }}/jupyterlab_cpp:latest
-          docker tag jupyterlab_cpp ${{ secrets.DOCKER_HUB_USERNAME }}/jupyterlab_cpp:${{ steps.tag_version.outputs.new_tag }}
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/jupyterlab_cpp:latest
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/jupyterlab_cpp:${{ steps.tag_version.outputs.new_tag }}
+          docker tag jupyterlab_cpp ${{secrets.DOCKER_HUB_USERNAME}}/jupyterlab_cpp:latest
+          docker tag jupyterlab_cpp ${{secrets.DOCKER_HUB_USERNAME}}/jupyterlab_cpp:${{steps.tag_version.outputs.new_tag}}
+          docker push ${{secrets.DOCKER_HUB_USERNAME}}/jupyterlab_cpp:latest
+          docker push ${{secrets.DOCKER_HUB_USERNAME}}/jupyterlab_cpp:${{steps.tag_version.outputs.new_tag}}
 
       # Create GitHub Release
       - name: Create GitHub Release
