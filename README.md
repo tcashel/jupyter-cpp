@@ -1,5 +1,7 @@
 # JupyterLab with C++ Kernel Docker Image
 
+[![Build and Test JupyterLab Docker Image](https://github.com/tcashel/jupyter-cpp/actions/workflows/docker-build.yaml/badge.svg)](https://github.com/tcashel/jupyter-cpp/actions/workflows/docker-build.yaml)
+
 This repository contains a Dockerfile for building a JupyterLab image with support for C++ kernels, utilizing `mambaorg/micromamba:latest` as the base image. It's designed for ease of use in development environments where working with C++ in JupyterLab is required.
 
 ## Features
