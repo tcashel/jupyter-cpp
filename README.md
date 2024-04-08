@@ -30,11 +30,3 @@ docker run -p 8888:8888 cpp_jupyterlab
 ```
 
 go to browser and open `http://localhost:8888/` and you will see the jupyterlab interface.
-
-
-
-
-
-
-   ```sh
-   docker build -t cpp_jupyterlab .
