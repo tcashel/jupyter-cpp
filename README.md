@@ -4,6 +4,13 @@
 
 This repository provides a Docker image for JupyterLab, equipped with a C++ kernel. It leverages `mambaorg/micromamba:latest` for a base image, ensuring fast and efficient package management. Designed specifically for developers and researchers working in C++, this environment simplifies the setup process and offers a robust platform for interactive coding and data analysis.
 
+> [!CAUTION]
+> :warning: This environment is good for learning and experimenting with basic C++ in JupyterLab. However, it is not intended for production use. Please ensure you understand the security implications before using this image in a network-exposed setting.
+
+> [!NOTE]  
+> Currently only C++11 is working, I have not gotten C++14 or C++17 to work yet. If you have any suggestions, please let me know.
+
+
 ## Features
 
 - **JupyterLab**: Up-to-date JupyterLab interface for managing notebooks and the development environment.
